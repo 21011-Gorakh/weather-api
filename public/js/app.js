@@ -11,7 +11,7 @@ weatherFrom.addEventListener('submit', (e) => {
     const location = search.value
 
     messageOne.textContent = "Loading..."
-    fetch('http://localhost:1012/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
 
         response.json().then((data) => {
             if (data.error) {
